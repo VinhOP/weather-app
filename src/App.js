@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Date from './components/Calender';
+import Location from './components/Location';
+import SearchBar from './components/SearchBar';
+import { useData } from './Context/LocationContext';
 
 function App() {
+  const data = useData()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className={'app-wrapper'}>
+        <SearchBar />
+        <Location />
+        <Date />
+        <div className='temp-container'>
+          {data.weather && <h1 className='temp'> {Math.round(data.weather.main.temp)}&#8451; </h1>}
+        </div>
+      </div>
     </div>
   );
 }
