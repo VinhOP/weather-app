@@ -11,13 +11,15 @@ html {
 }
 
 .app {
-  background-image: url(assests/images/hcmc.jpg);
-  background-size: cover;
-  background-position: top;
+  height: 100vh;
 }
 
 .app-wrapper {
-  min-height: 100vh;
+  background-image: url('https://s2.best-wallpaper.net/wallpaper/iphone/1808/Art-picture-mountains-trees-sun-deer_iphone_320x480.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,4 +40,10 @@ html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 15px 25px;
   text-shadow: 3px 6px rgba(50,50,70,0.5);
+}
+
+.weather-status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: white;
 }

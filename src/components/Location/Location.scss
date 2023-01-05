@@ -1,12 +1,28 @@
 .location-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     margin-top: 40px;
 }
 
+.get-pos-btn {
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid;
+    opacity: .7;
+    cursor: pointer;
+
+    &:active {
+        background-color: #ccc;
+    }
+}
+
 .location {
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: white;
-    opacity: .6;
-    
+    opacity: .9;
+    text-shadow: 2px 4px rgba(50, 50, 70, 0.5);
 }

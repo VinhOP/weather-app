@@ -6,11 +6,16 @@ export const useData = () => useContext(LocationContext)
 
 function LocationProvider({children}) {
 
+    const api = {
+        key: '65a76a052ea02efa0c91bc767945904c',
+        base: 'https://api.openweathermap.org/data/2.5/',
+    }
+
     const [query, setQuery] = useState('')
     const [weather, setWeather] = useState('')
-    console.log(weather);
 
     const classes = {
+        api,
         query,
         setQuery,
         weather,
